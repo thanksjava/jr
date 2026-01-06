@@ -41,4 +41,7 @@ public class TripInfo {
     private boolean isAvailable;   // 是否可用
 
     private List<TrainLineInfo> subLines;
+
+    // 在 TripInfo.java 中确保存在以下字段
+    private List<FareQuote> fareQuotes;
 }
