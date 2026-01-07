@@ -33,4 +33,14 @@ public class AgencyAAdapter implements TripSupplierAdapter {
                 .onSale("OPEN".equals(rawData.get("vendor_status"))) // 屏蔽了状态码差异
                 .build());
     }
+
+    @Override
+    public List<SeatPrice> fetchSeatDetails(String tripId) {
+        return List.of();
+    }
+
+    @Override
+    public boolean checkInventory(String tripId, String seatClass, int count) {
+        return false;
+    }
 }
