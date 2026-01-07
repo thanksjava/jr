@@ -38,7 +38,7 @@ public class TripInfo {
     private BigDecimal rawPrice;   // 供应商原始价
     private BigDecimal finalPrice; // 计算后的最终售卖价
     private List<String> tags;     // 业务标签
-    private boolean isAvailable;   // 是否可用
+    private boolean isAvailable = true;   // 是否可用
 
     private List<TrainLineInfo> subLines;
 

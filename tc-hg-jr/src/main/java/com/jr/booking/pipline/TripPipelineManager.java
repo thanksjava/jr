@@ -1,11 +1,11 @@
 package com.jr.booking.pipline;
 
 import com.jr.booking.model.dto.TripInfo;
+import com.jr.booking.pipline.context.PipelineContext;
 
 import java.util.List;
-import java.util.Map;
 
 public interface TripPipelineManager {
 
-    List<TripInfo> run(List<TripInfo> data, Map<String, Object> context);
+    List<TripInfo> run(List<TripInfo> data, PipelineContext context);
 }

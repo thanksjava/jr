@@ -1,17 +1,20 @@
 package com.jr.booking.pipline;
 
 import com.jr.booking.model.dto.TripInfo;
-
-import java.util.List;
-import java.util.Map;
+import com.jr.booking.pipline.context.PipelineContext;
 
 /**
- * @author chenzhijie
- * @version Id: TripPipe, v 0.1 2025/12/29 17:46 chenzhijie Exp $
+ * 优化后的 Pipe 接口：专注于单体处理
  */
 public interface TripPipe {
 
-    List<TripInfo> process(List<TripInfo> trips, Map<String, Object> context);
+    /**
+     * 处理单个行程数据
+     */
+    void process(TripInfo trip, PipelineContext context);
 
-    int getOrder(); // 执行顺序
+    /**
+     * 执行顺序
+     */
+    int getOrder();
 }
